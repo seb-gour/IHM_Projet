@@ -1,0 +1,43 @@
+<div class="center">
+  <h2>Infirmiers :</h2>
+  <table>
+    <div class="inf" *ngFor="let inf of getInfirmiers()">
+      <tr><td colspan="2"><img src="/data/{{inf.photo}}"/></td></tr>
+      <tr><td>ID</td><td>{{inf.id}}</td></tr>
+      <tr><td>NOM</td><td>{{inf.nom}}</td></tr>
+      <tr><td>PRENOM</td><td>{{inf.prenom}}</td></tr>
+      <tr><td>ADRESSE</td><td>{{inf.adresse.etage}} {{inf.adresse.numero}} {{inf.adresse.rue}} {{inf.adresse.codePostal}} {{inf.adresse.ville}}</td></tr>
+      <tr><td colspan="2"><h3>Patients :</h3></td></tr>
+    <div class="pat" *ngFor="let pat of inf.patients">
+      <tr><td>NOM</td><td>{{pat.nom}}</td></tr>
+      <tr><td>PRENOM</td><td>{{pat.prenom}}</td></tr>
+      <tr><td>SEXE</td><td>{{pat.sexe}}</td></tr>
+      <tr><td>NUMERO SECU</td><td>{{pat.numeroSecuriteSociale}}</td></tr>
+      <tr><td>ADRESSE</td><td>{{pat.adresse.etage}} {{pat.adresse.numero}} {{pat.adresse.rue}} {{pat.adresse.codePostal}} {{pat.adresse.ville}}</td></tr>
+      <tr><td colspan="2">
+        <form (ngSubmit)="DeaffecterPatient(pat.numeroSecuriteSociale)">
+          <input type="submit" value="Deaffecter" />
+        </form>
+      </td></tr>
+      <br/>
+    </div>
+      <tr><td colspan="2"><br/><hr><br/></td></tr>
+    </div>
+  </table>
+
+  <h2>Patients non affectes :</h2>
+  <div class="pat" *ngFor="let patNA of getPatientsNonAffectes()">
+    <tr><td>NOM</td><td>{{patNA.nom}}</td></tr>
+    <tr><td>PRENOM</td><td>{{patNA.prenom}}</td></tr>
+    <tr><td>SEXE</td><td>{{patNA.sexe}}</td></tr>
+    <tr><td>NUMERO SECU</td><td>{{patNA.numeroSecuriteSociale}}</td></tr>
+    <tr><td>ADRESSE</td><td>{{patNA.adresse.etage}} {{patNA.adresse.numero}} {{patNA.adresse.rue}} {{patNA.adresse.codePostal}} {{patNA.adresse.ville}}</td></tr>
+    <tr><td colspan="2">
+      <form (ngSubmit)="AffecterPatient(idInfirmier.value, patNA.numeroSecuriteSociale)">
+      Affecter patient : <select #idInfirmier id="idInfirmier"><option *ngFor="let inf of getInfirmiers()" value="inf.id">{{inf.nom}} {{inf.prenom}}</option></select>
+      <input type="submit" value="Affecter" />
+      </form>
+    </td></tr>
+    <br/>
+  </div>
+</div>

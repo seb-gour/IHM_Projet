@@ -1,0 +1,23 @@
+label
+{
+  display: block;
+  width: 150px;
+  float: left;
+}
+.center {
+  margin: auto;
+  width: 50%;
+}
+.inf {
+  text-align: left;
+}
+hr {
+  height: 4px;
+  border-style: solid;
+}
+.pat {
+  margin: auto;
+}
+td{
+  width: 200px;
+}

@@ -1,0 +1,32 @@
+<div class="center">
+<h2>Ajouter un patient</h2>
+<form (ngSubmit)="AddPatient(nom.value, prenom.value, naissance.value, sexe.value, numero.value, ad_etage.value, ad_num.value, ad_rue.value, ad_codep.value, ad_ville.value)">
+  <label for="nom">Nom :</label>
+  <input #nom type="text" id="nom" required/><br/>
+  <label #prenom for="prenom">Prénom :</label>
+  <input type="text" id="prenom" required/><br/>
+  <label for="sexe">Sexe :</label>
+  <select #sexe id="sexe" required>
+    <option value="M" name="sexe">Homme</option>
+    <option value="F" name="sexe">Femme</option>
+  </select><br/>
+  <label #naissance for="naissance">Date naissance :</label>
+  <input type="text" id="naissance" required/><br/>
+  <label for="numero">Numéro sécu :</label>
+  <input #numero type="text" id="numero" required/><br/>
+  <br/>
+  <h4>Adresse :</h4>
+  <label for="ad_etage">Etage :</label>
+  <input #ad_etage type="text" id="ad_etage" required/><br/>
+  <label for="ad_num">Numéro :</label>
+  <input #ad_num type="text" id="ad_num" required/><br/>
+  <label for="ad_rue">Rue :</label>
+  <input #ad_rue type="text" id="ad_rue" required/><br/>
+  <label for="ad_codep">Code postal :</label>
+  <input #ad_codep type="text" id="ad_codep" required/><br/>
+  <label for="ad_ville">Ville :</label>
+  <input #ad_ville type="text" id="ad_ville" required/><br/>
+  <br/>
+  <input type="submit" value="Ajouter" />
+</form>
+</div>
