@@ -1,9 +1,9 @@
 ******************************
 *   	   AUTEURS	     *
 ******************************
-NOM 1 :	GOURAT Sébastien
-NOM 2 : ELARIAK Zakarya
-Classe : L3 MIAGE - Valence
+NOM 1 :	GOURAT Sébastien -
+NOM 2 : ELARIAK Zakarya -
+Classe : L3 MIAGE - Valence -
 Années : 2017 - 2018
 
 
